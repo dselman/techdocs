@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cicero Quick Start Tutorial · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Cicero Quick Start Tutorial · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://accordproject.org/index.html"/><meta property="og:description" content="# Tutorial 1 : Quick Start"/><meta property="og:image" content="https://accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://accordproject.org/blog/atom.xml" title="Accord Project Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://accordproject.org/blog/feed.xml" title="Accord Project Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/accord_logo.png" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Docs</a></li><li class=""><a href="/docs/api.html" target="_self">API</a></li><li class=""><a href="/en/help.html" target="_self">Help</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Cicero</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Accord Project</h3><ul><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Accord Project</a></li></ul></div><div class="navGroup navGroupActive"><h3>Cicero</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cicero.html">Introduction to Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-installation.html">Cicero Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-concepts.html">Cicero Concepts</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/cicero-tutorial_001.html">Cicero Quick Start Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-cli.html">CLI Documentation</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-tasks.html">Cicero Tasks</a></li></ul></div><div class="navGroup navGroupActive"><h3>Ergo</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ergo.html">Introduction to Ergo</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Cicero Quick Start Tutorial</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="tutorial-1-quick-start"></a><a href="#tutorial-1-quick-start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tutorial 1 : Quick Start</h1>
+<h2><a class="anchor" aria-hidden="true" id="using-an-existing-template"></a><a href="#using-an-existing-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an existing Template</h2>
+<h3><a class="anchor" aria-hidden="true" id="download-the-template"></a><a href="#download-the-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download the Template</h3>
+<p>You can either <a href="https://github.com/accordproject/cicero-template-library/releases">download the latest release archive</a> or if you have <code>git</code>
+installed simply <code>git clone</code> the repository::</p>
+<pre><code class="hljs">git clone https://github.com/accordproject/cicero-template-library
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="parse"></a><a href="#parse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parse</h3>
+<p>Use the <code>cicero parse</code> command to load a template from a directory on disk and then use
+it to parse input text, echoing the result of parsing. If the input text is valid the parsing
+result will be a JSON serialized instance of the Template Mode:</p>
+<p>Sample template.tem:</p>
+<pre><code class="hljs">Name of the person to greet: [{name}]. Thank you!
+</code></pre>
+<p>Sample.txt:</p>
+<pre><code class="hljs">Name of the person to greet: &quot;Dan&quot;. Thank you!
+</code></pre>
+<p>Parsing using the command line:</p>
+<pre><code class="hljs">    <span class="hljs-keyword">cd</span> cicero-template-library cicero parse <span class="hljs-params">--template</span> <span class="hljs-string">./helloworld/</span> <span class="hljs-params">--dsl</span> <span class="hljs-string">./helloworld/sample.txt</span>
+    Setting clause data: {<span class="hljs-string">"$class"</span>:<span class="hljs-string">"io.clause.helloworld.TemplateModel"</span>,<span class="hljs-string">"name"</span>:<span class="hljs-string">"Dan"</span>}
+</code></pre>
+<p>Or, attempting to parse invalid data will result in line and column information for the syntax
+error.</p>
+<p>Sample.txt:</p>
+<pre><code class="hljs">    FUBAR Name <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> person <span class="hljs-built_in">to</span> greet: <span class="hljs-string">"Dan"</span>. Thank you!
+</code></pre>
+<p>Output:</p>
+<pre><code class="hljs">    { Error: invalid <span class="hljs-keyword">syntax</span> at <span class="hljs-built_in">line</span> <span class="hljs-number">1</span> <span class="hljs-keyword">col</span> <span class="hljs-number">1</span>:
+    FUBAR  Name of the person <span class="hljs-keyword">to</span> gree<span class="hljs-variable">t:</span> <span class="hljs-string">"Dan"</span>. 
+    ^ Unexpected <span class="hljs-string">"F"</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="execute"></a><a href="#execute" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execute</h3>
+<p>Use the <code>cicero execute</code> command to load a template from a directory on disk,
+instantiate a clause based on input text, and then invoke the clause using an incoming JSON
+payload.</p>
+<p>data.json::</p>
+<pre><code class="hljs">    {
+        <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"io.clause.helloworld.Request"</span>, <span class="hljs-attr">"input"</span>: <span class="hljs-string">"World"</span>
+    }
+</code></pre>
+<p>Commands:</p>
+<pre><code class="hljs">    cd cicero-template-library 
+    cicero<span class="hljs-built_in"> execute </span>--template ./helloworld/ --dsl ./helloworld/sample.txt --data ./helloworld/data.json
+</code></pre>
+<p>The results of execution (a JSON serialized object) are displayed. They include:</p>
+<ul>
+<li>Details of the clause executed (name, version, SHA256 hash of clause data)</li>
+<li>The incoming request object</li>
+<li>The output response object</li>
+</ul>
+<p>Example:</p>
+<pre><code class="hljs">    {
+        <span class="hljs-attr">"clause"</span>:<span class="hljs-string">"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60"</span>,
+        <span class="hljs-attr">"request"</span>:{
+            <span class="hljs-attr">"$class"</span>:<span class="hljs-string">"io.clause.helloworld.Request"</span>, <span class="hljs-attr">"input"</span>:<span class="hljs-string">"World"</span>
+        }, 
+        <span class="hljs-attr">"response"</span>:{
+            <span class="hljs-attr">"$class"</span>:<span class="hljs-string">"io.clause.helloworld.Response"</span>, <span class="hljs-attr">"output"</span>:<span class="hljs-string">"Hello Dan World"</span>,
+            <span class="hljs-attr">"transactionId"</span>:<span class="hljs-string">"cf1dabb5-d604-4ffa-8a87-8333e77a735a"</span>,
+            <span class="hljs-attr">"timestamp"</span>:<span class="hljs-string">"2017-10-31T10:47:42.055Z"</span>
+        }
+    }
+</code></pre>
+<p>Note that in the response data from the template has been combined with data from the request.</p>
+<h2><a class="anchor" aria-hidden="true" id="creating-a-new-template"></a><a href="#creating-a-new-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating a New Template</h2>
+<p>Now that you have executed an existing template, let's create a new template.</p>
+<blockquote>
+<p>If you would like to contribute your template back into the <code>cicero-template-library</code> please start by <a href="https://help.github.com/articles/fork-a-repo/">forking</a> the <code>cicero-template-library</code> project on GitHub. This will make it easy for you to submit a pull request to get your new template added to the library.</p>
+</blockquote>
+<p>Install the template generator::</p>
+<pre><code class="hljs">    <span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> <span class="hljs-selector-tag">-g</span> <span class="hljs-selector-tag">yo</span> 
+    <span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">install</span> <span class="hljs-selector-tag">-g</span> <span class="hljs-selector-tag">yo</span> @<span class="hljs-keyword">accordproject</span>/<span class="hljs-keyword">generator</span>-<span class="hljs-keyword">cicero</span>-<span class="hljs-keyword">template</span>
+</code></pre>
+<p>Run the template generator:</p>
+<pre><code class="hljs">    <span class="hljs-selector-tag">yo</span> @<span class="hljs-keyword">accordproject</span>/<span class="hljs-keyword">cicero</span>-<span class="hljs-keyword">template</span>
+</code></pre>
+<blockquote>
+<p>If you have forked the <code>cicero-template-library</code> <code>cd</code> into that directory first.</p>
+</blockquote>
+<p>Give your generator a name (no spaces) and then supply a namespace for your template model (again,
+no spaces). The generator will then create the files and directories required for a basic template
+(based on the helloworld template).</p>
+<h2><a class="anchor" aria-hidden="true" id="edit-the-template-grammar"></a><a href="#edit-the-template-grammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit the Template Grammar</h2>
+<p>Start by editing the template grammar in the <code>grammar/template.tem</code> file. You will want to replace
+the text with something suitable for your template, introducing variables as required. The
+variables are marked-up using <code>[{name}]</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="edit-the-template-model"></a><a href="#edit-the-template-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit the Template Model</h2>
+<p>All of the variables referenced in your template grammar must exist in your template model. Edit
+the file <code>models/model.cto</code> to include all your variables. The Hyperledger Composer Modeling Language primitive data types
+are:</p>
+<ul>
+<li>String</li>
+<li>Long</li>
+<li>Integer</li>
+<li>DateTime</li>
+<li>Double</li>
+<li>Boolean</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="edit-the-request-and-response-transaction-types"></a><a href="#edit-the-request-and-response-transaction-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit the Request and Response Transaction Types</h3>
+<p>Your template expects to receive data as input and will produce data as output. The structure of
+this request/response data is captured in <code>Request</code> and <code>Response</code> transaction types in your model
+namespace. Open up the file <code>models/model.cto</code> and edit the definition of the <code>Request</code> type to
+include all the data you expect to receive from the outside world and that will be used by the
+business logic of your template. Similarly edit the definition of the <code>Response</code> type to include
+all the data that the business logic for your template will compute and would like to return to the
+caller.</p>
+<h3><a class="anchor" aria-hidden="true" id="edit-the-logic-of-the-template"></a><a href="#edit-the-logic-of-the-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit the Logic of the Template</h3>
+<p>Now edit the business logic of the template itself. At present this is expressed as ES 2015
+JavaScript functions (other languages may be supported in the future). Open the file <code>lib/logic.js</code>
+and edit the <code>execute</code> method to perform the calculations your logic requires. Use the
+<code>context.request</code> and <code>context.data</code> properties to access the incoming request and the template
+data respectively, setting properties on <code>context.response</code> to be returned to the caller.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="cicero-concepts.html">← Cicero Concepts</a><a class="docs-next button" href="cicero-cli.html">CLI Documentation →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#using-an-existing-template">Using an existing Template</a><ul class="toc-headings"><li><a href="#download-the-template">Download the Template</a></li><li><a href="#parse">Parse</a></li><li><a href="#execute">Execute</a></li></ul></li><li><a href="#creating-a-new-template">Creating a New Template</a></li><li><a href="#edit-the-template-grammar">Edit the Template Grammar</a></li><li><a href="#edit-the-template-model">Edit the Template Model</a><ul class="toc-headings"><li><a href="#edit-the-request-and-response-transaction-types">Edit the Request and Response Transaction Types</a></li><li><a href="#edit-the-logic-of-the-template">Edit the Logic of the Template</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/accord_logo.png" alt="Accord Project" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/accordproject.html">Getting Started</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://accord-project.slack.com/messages/C7U521CTG">Slack</a><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/accordproject">GitHub</a><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://accordproject.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/accord_logo.png" alt="Accord Project Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Clause Inc.</section></footer></div></body></html>

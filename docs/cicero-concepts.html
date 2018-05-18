@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cicero Concepts · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Cicero Concepts · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://accordproject.org/index.html"/><meta property="og:description" content="# Template "/><meta property="og:image" content="https://accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://accordproject.org/blog/atom.xml" title="Accord Project Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://accordproject.org/blog/feed.xml" title="Accord Project Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/accord_logo.png" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Docs</a></li><li class=""><a href="/docs/api.html" target="_self">API</a></li><li class=""><a href="/en/help.html" target="_self">Help</a></li><li class=""><a href="/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Cicero</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Accord Project</h3><ul><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Accord Project</a></li></ul></div><div class="navGroup navGroupActive"><h3>Cicero</h3><ul><li class="navListItem"><a class="navItem" href="/docs/cicero.html">Introduction to Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-installation.html">Cicero Installation</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/cicero-concepts.html">Cicero Concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-tutorial_001.html">Cicero Quick Start Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-cli.html">CLI Documentation</a></li><li class="navListItem"><a class="navItem" href="/docs/cicero-tasks.html">Cicero Tasks</a></li></ul></div><div class="navGroup navGroupActive"><h3>Ergo</h3><ul><li class="navListItem"><a class="navItem" href="/docs/ergo.html">Introduction to Ergo</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Cicero Concepts</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="template"></a><a href="#template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template</h1>
+<p>A template is composed of three elements:</p>
+<ul>
+<li>Template Grammar, the natural language text for the template</li>
+<li>Template Model, the data model that backs the template</li>
+<li>Logic, the executable business logic for the template</li>
+</ul>
+<p><img src="/docs/assets/template.png" alt="Cicero Template"></p>
+<p>When combined these three elements allow templates to be edited, analyzed, queried and executed.</p>
+<p>A complete sample template is available here:
+<a href="https://github.com/accordproject/cicero-template-library/tree/master/latedeliveryandpenalty">https://github.com/accordproject/cicero-template-library/tree/master/latedeliveryandpenalty</a></p>
+<h1><a class="anchor" aria-hidden="true" id="template-grammar"></a><a href="#template-grammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template Grammar</h1>
+<p>The template grammar for a template captures the natural language structure of the template. It is
+UTF-8 text with markup to introduce named variables.</p>
+<p>Here is a simple template grammar:</p>
+<pre><code class="hljs">   Late Delivery and Penalty. In <span class="hljs-keyword">case</span> <span class="hljs-keyword">of</span> delayed delivery[{<span class="hljs-string">" except for Force
+   Majeure cases,"</span>:? forceMajeure}] the Seller shall pay <span class="hljs-keyword">to</span> the Buyer <span class="hljs-keyword">for</span> <span class="hljs-keyword">every</span>
+   [{penaltyDuration}] <span class="hljs-keyword">of</span> delay penalty amounting <span class="hljs-keyword">to</span> [{penaltyPercentage}]% <span class="hljs-keyword">of</span>
+   the total <span class="hljs-keyword">value</span> <span class="hljs-keyword">of</span> the Equipment whose delivery has been delayed. Any
+   fractional part <span class="hljs-keyword">of</span> a [{fractionalPart}] is <span class="hljs-keyword">to</span> be considered a full
+   [{fractionalPart}]. The total amount <span class="hljs-keyword">of</span> penalty shall not however, exceed
+   [{capPercentage}]% <span class="hljs-keyword">of</span> the total <span class="hljs-keyword">value</span> <span class="hljs-keyword">of</span> the Equipment involved <span class="hljs-keyword">in</span> late
+   delivery. If the delay is more than [{termination}], the Buyer is entitled <span class="hljs-keyword">to</span>
+   terminate this Contract.
+</code></pre>
+<p>Variables in template grammars are enclosed in <code>[{</code> and <code>}]</code>.</p>
+<h1><a class="anchor" aria-hidden="true" id="template-model"></a><a href="#template-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template Model</h1>
+<p>The model for a template captures the names and types of the variables.
+Template models are expressed using the <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.html">Hyperledger Composer Modeling Language</a>, a runtime neutral,
+text-based data-definition (schema) language.</p>
+<p>Here is a sample template model:</p>
+<pre><code class="hljs">@AccordTemplateModel(&quot;latedeliveryandpenalty&quot;)
+concept TemplateModel {
+    /**
+    * Does the clause include a force majeure provision?
+    */
+    o Boolean forceMajeure
+
+    /**
+    * For every penaltyDuration that the goods are late
+    */
+    o Duration penaltyDuration
+
+    /**
+    * Seller pays the buyer penaltyPercentage % of the value of the goods
+    */
+    o Double penaltyPercentage
+
+    /**
+    * Up to capPercentage % of the value of the goods
+    */
+    o Double capPercentage
+
+    /**
+    * If the goods are &gt;= termination late then the buyer may terminate the contract
+    */
+    o Duration termination
+
+    /**
+    * Fractional part of a ... is considered a whole ...
+    */
+    o TemporalUnit fractionalPart
+}
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="template-logic"></a><a href="#template-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template Logic</h1>
+<p>The logic for a template is written as a set of JavaScript functions. The JavaScript functions are
+invoked by the engine when transactions are received for processing and return a response. Both the
+incoming requests and responses are modeled types.</p>
+<p>Here is a sample JavaScript function:</p>
+<pre><code class="hljs">    <span class="hljs-comment">/** 
+    * Execute the smart clause 
+    * <span class="hljs-doctag">@param</span> {Context} context - the Accord context 
+    * <span class="hljs-doctag">@param</span> {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest}
+    * context.request - the incoming request 
+    * <span class="hljs-doctag">@param</span> {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse}
+    * context.response - the response * <span class="hljs-doctag">@AccordClauseLogic</span> 
+    */</span>
+    function execute(context) {
+
+        logger.info(context); <span class="hljs-keyword">var</span> req = context.request; <span class="hljs-keyword">var</span> res =
+        context.response; <span class="hljs-keyword">var</span> <span class="hljs-keyword">data</span> = context.<span class="hljs-keyword">data</span>; <span class="hljs-keyword">var</span> now =
+        moment(req.timestamp); <span class="hljs-keyword">var</span> agreed = moment(req.agreedDelivery);
+
+        res.buyerMayTerminate = <span class="hljs-literal">false</span>; res.penalty = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">if</span> (req.forceMajeure) {
+            logger.info(<span class="hljs-string">'forceMajeure'</span>); res.buyerMayTerminate = <span class="hljs-literal">true</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (!req.forceMajeure &amp;&amp; now.isAfter(agreed)) {
+            logger.info(<span class="hljs-string">'late'</span>); logger.info(<span class="hljs-string">'penalty duration unit: '</span> +
+            <span class="hljs-keyword">data</span>.penaltyDuration.unit); logger.info(<span class="hljs-string">'penalty duration amount: '</span>
+            + <span class="hljs-keyword">data</span>.penaltyDuration.amount); <span class="hljs-comment">// the delivery is late var diff =</span>
+            now.diff(agreed, <span class="hljs-keyword">data</span>.penaltyDuration.unit); logger.info(<span class="hljs-string">'diff:'</span> +
+            diff);
+
+            <span class="hljs-keyword">var</span> penalty = (diff / <span class="hljs-keyword">data</span>.penaltyDuration.amount) *
+            <span class="hljs-keyword">data</span>.penaltyPercentage/<span class="hljs-number">100</span> * req.goodsValue;
+
+            <span class="hljs-comment">// cap the maximum penalty if (penalty &gt; data.capPercentage/100 *</span>
+            req.goodsValue) {
+                logger.info(<span class="hljs-string">'capped.'</span>); penalty = <span class="hljs-keyword">data</span>.capPercentage/<span class="hljs-number">100</span> *
+                req.goodsValue;
+            }
+
+            res.penalty = penalty;
+
+            <span class="hljs-comment">// can we terminate? if (diff &gt; data.termination) {</span>
+                logger.info(<span class="hljs-string">'buyerMayTerminate.'</span>); res.buyerMayTerminate = <span class="hljs-literal">true</span>;
+            }
+        }
+    }
+</code></pre>
+<p>Note that the type information in the JSDoc comments is used to route incoming transactions to the
+JavaScript function.</p>
+<h1><a class="anchor" aria-hidden="true" id="template-library"></a><a href="#template-library" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template Library</h1>
+<p>Templates may be organized into a Template Library, typically stored on GitHub (either public or private).
+For example:
+<a href="https://github.com/accordproject/cicero-template-library">https://github.com/accordproject/cicero-template-library</a></p>
+<h1><a class="anchor" aria-hidden="true" id="clause"></a><a href="#clause" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clause</h1>
+<p>A Clause is an instance of a Template, where the variables for the template have been set to specific values.
+A Clause may be instantiated by either parsing natural language text that conforms to the structure of the
+template grammar, or may be instantiated from a JSON object that is an instance of the Template Model for the
+template.</p>
+<h1><a class="anchor" aria-hidden="true" id="engine"></a><a href="#engine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Engine</h1>
+<p>Cicero includes a Node.js VM based execution engine. The engine routes incoming transactions to template functions,
+performs data validation, executes the functions within a sandboxed environment, and then validates the response
+before returning it to the caller.</p>
+<p><img src="/docs/assets/execution_context.png" alt="Execution Context"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="cicero-installation.html">← Cicero Installation</a><a class="docs-next button" href="cicero-tutorial_001.html">Cicero Quick Start Tutorial →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/accord_logo.png" alt="Accord Project" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/accordproject.html">Getting Started</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://accord-project.slack.com/messages/C7U521CTG">Slack</a><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/accordproject">GitHub</a><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://accordproject.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/accord_logo.png" alt="Accord Project Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Clause Inc.</section></footer></div></body></html>
