@@ -2,21 +2,21 @@
 <rss version="2.0">
     <channel>
         <title>Accord Project Blog</title>
-        <link>https://accordproject.org/blog</link>
+        <link>https://accordproject.github.io/techdocsblog</link>
         <description>The best place to stay up-to-date with the latest Accord Project news and events.</description>
         <lastBuildDate>Fri, 18 May 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
             <title>Accord Project Blog</title>
-            <url>https://accordproject.org/img/accord_logo.png</url>
-            <link>https://accordproject.org/blog</link>
+            <url>https://accordproject.github.io/techdocsimg/accord_logo.png</url>
+            <link>https://accordproject.github.io/techdocsblog</link>
         </image>
         <copyright>Copyright © 2018 Clause Inc.</copyright>
         <item>
             <title><![CDATA[Welcome!]]></title>
-            <link>https://accordproject.org/blog/2018/05/18/blog-post.html</link>
-            <guid>https://accordproject.org/blog/2018/05/18/blog-post.html</guid>
+            <link>https://accordproject.github.io/techdocsblog/2018/05/18/blog-post.html</link>
+            <guid>https://accordproject.github.io/techdocsblog/2018/05/18/blog-post.html</guid>
             <pubDate>Fri, 18 May 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
 ]]></description>
