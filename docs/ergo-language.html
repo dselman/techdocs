@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Ergo Language · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Ergo Language · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://accordproject.github.io/techdocs/index.html"/><meta property="og:description" content="This contains a few notes on the Ergo language."/><meta property="og:image" content="https://accordproject.github.io/techdocs/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://accordproject.github.io/techdocs/img/docusaurus.png"/><link rel="shortcut icon" href="/techdocs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://accordproject.github.io/blog/atom.xml" title="Accord Project Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://accordproject.github.io/blog/feed.xml" title="Accord Project Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/techdocs/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/techdocs/"><img class="logo" src="/techdocs/img/accord_logo.png" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/techdocs/versions.html"><h3>0.2.39</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/techdocs/docs/accordproject.html" target="_self">Docs</a></li><li class=""><a href="/techdocs/docs/api.html" target="_self">API</a></li><li class=""><a href="/techdocs/en/help.html" target="_self">Help</a></li><li class=""><a href="/techdocs/blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Ergo</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Accord Project</h3><ul><li class="navListItem"><a class="navItem" href="/techdocs/docs/accordproject.html">Accord Project</a></li></ul></div><div class="navGroup navGroupActive"><h3>Cicero</h3><ul><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero.html">Introduction to Cicero</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero-installation.html">Cicero Installation</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero-concepts.html">Cicero Concepts</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero-tutorial_001.html">Cicero Quick Start Tutorial</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero-cli.html">CLI Documentation</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/cicero-tasks.html">Cicero Tasks</a></li></ul></div><div class="navGroup navGroupActive"><h3>Ergo</h3><ul><li class="navListItem"><a class="navItem" href="/techdocs/docs/ergo.html">Introduction to Ergo</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/ergo-installation.html">Ergo Installation</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/techdocs/docs/ergo-language.html">Ergo Language</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/ergo-conditional-expressions.html">Ergo Conditional Expressions</a></li><li class="navListItem"><a class="navItem" href="/techdocs/docs/ergo-match-expressions.html">Ergo Match Expressions</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Ergo Language</h1></header><article><div><span><p>This contains a few notes on the Ergo language.</p>
+<h1><a class="anchor" aria-hidden="true" id="general"></a><a href="#general" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General</h1>
+<p>Ergo files have the <code>.ergo</code> extension.</p>
+<h1><a class="anchor" aria-hidden="true" id="comments"></a><a href="#comments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comments</h1>
+<p>Comments in Ergo are written in a commonly used style:</p>
+<pre><code class="hljs">    <span class="hljs-comment">// This is a single line comment</span>
+    <span class="hljs-comment">/* This comment spans multiple lines
+       and it can also be <span class="hljs-comment">/* nested */</span> */</span>
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="expressions"></a><a href="#expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expressions</h1>
+<p>The logic for individual clauses in Ergo is written using expressions.
+Here are the expressions Ergo supports.</p>
+<h2><a class="anchor" aria-hidden="true" id="literal-values"></a><a href="#literal-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Literal values</h2>
+<pre><code class="hljs">    <span class="hljs-string">"John Smith"</span> <span class="hljs-comment">// a string literal</span>
+    <span class="hljs-number">1</span>            <span class="hljs-comment">// an integer literal</span>
+    <span class="hljs-number">3.5e-10</span>      <span class="hljs-comment">// a floating point literal</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="operators"></a><a href="#operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operators</h2>
+<pre><code class="hljs">    <span class="hljs-number">1</span>+<span class="hljs-number">2</span>*<span class="hljs-number">3</span>                <span class="hljs-comment">// Arithmetic operators</span>
+    <span class="hljs-number">1</span> &lt;= <span class="hljs-number">3</span>               <span class="hljs-comment">// Comparison operators</span>
+    <span class="hljs-number">1</span> == <span class="hljs-number">2</span>
+    <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>
+    true or false        <span class="hljs-comment">// Boolean operators</span>
+    true and false
+    <span class="hljs-string">"Hello"</span> ++ <span class="hljs-string">" World!"</span> <span class="hljs-comment">// String concatenation</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="local-variable-declarations"></a><a href="#local-variable-declarations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local variable declarations</h2>
+<pre><code class="hljs">    define <span class="hljs-keyword">variable</span> x <span class="hljs-comment">= 1</span>; <span class="hljs-comment">// declares and initialize a variable</span>
+    x+<span class="hljs-number">2</span>                    <span class="hljs-comment">// rest of the expression, with variable x in scope</span>
+</code></pre>
+<p>Local variables can also be declared with the shorter <code>let</code> form:</p>
+<pre><code class="hljs">    let x = <span class="hljs-number">1</span>;             <span class="hljs-comment">// declares and initialize a variable</span>
+    x+<span class="hljs-number">2</span>                    <span class="hljs-comment">// rest of the expression, with variable x in scope</span>
+</code></pre>
+<p>Local variables can also be declared with a type:</p>
+<pre><code class="hljs">    define <span class="hljs-keyword">variable</span> name <span class="hljs-comment">: String =</span> <span class="hljs-comment">"John"</span>; <span class="hljs-comment">// declares and initialize a string variable</span>
+    name ++ <span class="hljs-string">" Smith"</span>                        <span class="hljs-comment">// rest of the expression</span>
+    define <span class="hljs-keyword">variable</span> x <span class="hljs-comment">: Double = 3.1416</span>     //<span class="hljs-comment"> declares and initialize a double variable</span>
+    sqrt(x)                                 //<span class="hljs-comment"> rest of the expression</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="conditionals"></a><a href="#conditionals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditionals</h2>
+<p>See also the <a href="/techdocs/docs/ergo-conditional-expressions.html">Conditional Expression Reference</a></p>
+<pre><code class="hljs">    <span class="hljs-keyword">if</span> x &lt; <span class="hljs-number">0</span>   // Condition
+    <span class="hljs-keyword">then</span> -x+<span class="hljs-number">1</span>  // Expression <span class="hljs-keyword">if</span> condition <span class="hljs-keyword">is</span> <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">else</span> x+<span class="hljs-number">1</span>   // Expression <span class="hljs-keyword">if</span> condition <span class="hljs-keyword">is</span> <span class="hljs-literal">false</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="enforce-expressions"></a><a href="#enforce-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enforce expressions</h2>
+<p>Before  a contract is enforceable some preconditions must be satisfied:</p>
+<ul>
+<li>Competent parties who have the legal capacity to contract</li>
+<li>Lawful subject matter</li>
+<li>Mutuality of obligation</li>
+<li>Consideration</li>
+</ul>
+<p>The constructs below will be used to determine if the preconditions have been met and what actions to take if they are not</p>
+<pre><code class="hljs">Example Prose
+    Do the parties have adequate funds to<span class="hljs-built_in"> execute </span>this contract?  
+</code></pre>
+<p>One can check preconditions in a clause using enforce expressions, as
+follows:</p>
+<pre><code class="hljs">    enforce x &gt;= <span class="hljs-number">0</span>               // Condition
+    <span class="hljs-keyword">else</span> <span class="hljs-string">"Something went wrong"</span>; // Expression <span class="hljs-keyword">if</span> condition <span class="hljs-keyword">is</span> <span class="hljs-literal">false</span>
+    x+<span class="hljs-number">1</span>                          // Expression <span class="hljs-keyword">if</span> condition <span class="hljs-keyword">is</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>The else part of the expression can be ommitted in which case Ergo
+returns an error by default.</p>
+<pre><code class="hljs">    enforce x &gt;= 0;           <span class="hljs-string">//</span> Condition
+    x+1                       <span class="hljs-string">//</span> Expression <span class="hljs-keyword">if</span> condition is <span class="hljs-literal">true</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="match-expressions"></a><a href="#match-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Match expressions</h2>
+<p>Match expressions allow to check an expression against multiple possible
+values:</p>
+<pre><code class="hljs">    <span class="hljs-keyword">match</span> fruitcode
+      <span class="hljs-built_in">with</span> <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> <span class="hljs-string">"Apple"</span>
+      <span class="hljs-built_in">with</span> <span class="hljs-number">2</span> <span class="hljs-keyword">then</span> <span class="hljs-string">"Apricot"</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-string">"Strange Fruit"</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="for-expressions"></a><a href="#for-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For expressions</h2>
+<p>For expressions allow to apply an expression of every element in an
+input array of values and returns a new array:</p>
+<pre><code class="hljs">foreach x in [<span class="hljs-number">1</span>,<span class="hljs-number">-2</span>,<span class="hljs-number">3</span>] return x+<span class="hljs-number">1</span>
+</code></pre>
+<p>For expressions can have an optional condition of the values being
+iterated over:</p>
+<pre><code class="hljs">    foreach x in [<span class="hljs-number">1</span>,<span class="hljs-number">-2</span>,<span class="hljs-number">3</span>] where x &gt; <span class="hljs-number">0</span> return x+<span class="hljs-number">1</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="creating-objects"></a><a href="#creating-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating objects</h2>
+<p>Creating objects (such as CTO concepts, transactions, or Ergo errors)
+can be done using <code>new</code> with the name of the concept and the values
+for each fields:</p>
+<pre><code class="hljs">    <span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">Person</span>{
+      <span class="hljs-attribute">name</span>: <span class="hljs-string">"John Smith"</span>,
+      age: <span class="hljs-number">32</span>
+    }
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h1>
+<p>It is possible to declare global variables and functions in Ergo:</p>
+<pre><code class="hljs">    <span class="hljs-keyword">define</span> <span class="hljs-section">variable</span> pi = 3.1416
+    <span class="hljs-keyword">define</span> <span class="hljs-section">function</span> area(radius Double) : <span class="hljs-keyword">Double</span> {
+      pi * r * r
+    }
+    <span class="hljs-keyword">area</span>(1.5)
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="types"></a><a href="#types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types</h1>
+<p>In Ergo, types are based on the Hyperledger Composer Modeling Language (referred to in this document as CTO models). <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.htm">https://hyperledger.github.io/composer/latest/reference/cto_language.htm</a>. One can either import an existing CTO file, or declare types within Ergo itself. One can either import an existing CTO file, or declare types within Ergo
+itself.</p>
+<p>As we have seen in previous examples, one can refer to types in variable
+declarations or in functions/clauses signatures.</p>
+<p>Here are atomic types:</p>
+<pre><code class="hljs">    <span class="hljs-keyword">Boolean</span>                   <span class="hljs-comment">// Atomic types</span>
+    String
+    <span class="hljs-keyword">Double</span>
+    <span class="hljs-keyword">Long</span>
+    Integer
+    DateTime
+</code></pre>
+<p>Here is a record (sometimes called a struct in other languages):</p>
+<pre><code class="hljs">    { <span class="hljs-string">name:</span> String, <span class="hljs-string">age:</span> Long } <span class="hljs-comment">// Record with two attributes:</span>
+                                <span class="hljs-comment">// a name and an age</span>
+</code></pre>
+<p>Here are array types:</p>
+<pre><code class="hljs">    <span class="hljs-selector-tag">String</span><span class="hljs-selector-attr">[]</span>                      <span class="hljs-comment">// Array of String values</span>
+    <span class="hljs-selector-tag">Product</span><span class="hljs-selector-attr">[]</span>                     <span class="hljs-comment">// Array of Product (a declared type)</span>
+    { <span class="hljs-attribute">name</span>: String, <span class="hljs-attribute">age</span>: Long }<span class="hljs-selector-attr">[]</span> <span class="hljs-comment">// Array of records</span>
+</code></pre>
+<p>Here is how to declare CTO classes (either concepts or transactions in
+CTO terminology):</p>
+<pre><code class="hljs">    <span class="hljs-keyword">define</span> <span class="hljs-section">concept</span> <span class="hljs-keyword">Product</span> {
+       <span class="hljs-built_in">id</span> : String
+    }
+    <span class="hljs-keyword">define</span> <span class="hljs-keyword">concept</span> <span class="hljs-keyword">Car</span> <span class="hljs-keyword">extends</span> <span class="hljs-keyword">Product</span> {
+       range : String
+    }
+    <span class="hljs-keyword">define</span> <span class="hljs-keyword">transaction</span> <span class="hljs-keyword">Response</span> {
+       rate : Double,
+       penalty : Double
+    }
+    <span class="hljs-keyword">define</span> <span class="hljs-keyword">enum</span> <span class="hljs-keyword">ProductType</span> {
+     DAIRY,
+     BEEF,
+     VEGETABLES
+    }
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="contracts-new"></a><a href="#contracts-new" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contracts <em>NEW</em></h1>
+<p>You can declare a contract over a template model as follows:</p>
+<pre><code class="hljs">    <span class="hljs-selector-tag">contract</span> <span class="hljs-selector-tag">ContractName</span> <span class="hljs-selector-tag">over</span> <span class="hljs-selector-tag">TemplateModel</span> {
+      <span class="hljs-selector-tag">clause</span> <span class="hljs-selector-tag">C1</span>(<span class="hljs-attribute">request </span>: ReqType1) : <span class="hljs-selector-tag">RespType1</span> {
+        <span class="hljs-comment">// Expression</span>
+      }
+
+      <span class="hljs-selector-tag">clause</span> <span class="hljs-selector-tag">C2</span>(<span class="hljs-attribute">request </span>: ReqType2) : <span class="hljs-selector-tag">RespType2</span> {
+        <span class="hljs-comment">// Expression</span>
+      }
+    }
+</code></pre>
+<p>When inside a contract, the <code>contract</code> variable contains the instance
+of the Template for the current contract.</p>
+<p>When inside a clause, the <code>clause</code> variable contains the part of the
+Template instance specific to that clause.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="ergo-installation.html">← Ergo Installation</a><a class="docs-next button" href="ergo-conditional-expressions.html">Ergo Conditional Expressions →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#literal-values">Literal values</a></li><li><a href="#operators">Operators</a></li><li><a href="#local-variable-declarations">Local variable declarations</a></li><li><a href="#conditionals">Conditionals</a></li><li><a href="#enforce-expressions">Enforce expressions</a></li><li><a href="#match-expressions">Match expressions</a></li><li><a href="#for-expressions">For expressions</a></li><li><a href="#creating-objects">Creating objects</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/techdocs/" class="nav-home"><img src="/techdocs/img/accord_logo.png" alt="Accord Project" width="66" height="58"/></a><div><h5>Docs</h5><a href="/techdocs/docs/en/accordproject.html">Getting Started</a></div><div><h5>Community</h5><a href="/techdocs/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://accord-project.slack.com/messages/C7U521CTG">Slack</a><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/techdocs/blog">Blog</a><a href="https://github.com/accordproject">GitHub</a><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://accordproject.org" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/techdocs/img/accord_logo.png" alt="Accord Project Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Clause Inc.</section></footer></div></body></html>
